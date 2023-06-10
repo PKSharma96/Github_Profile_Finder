@@ -1,18 +1,15 @@
-# Github-Profile-Finder-App
-A Simple Github Profile Finder App Using HTML, CSS and Javascript
+# Github_Profile_Tracker
+A Simple Github Profile Tracker App Using HTML, CSS and Javascript
 
-Demo: https://github-prof-finder.netlify.app/
+Demo: https://pksharma96.github.io/Profile/
 
-![image](https://user-images.githubusercontent.com/89207670/172688124-eae6a370-9fb9-40e5-ac25-fb5783ebd5d3.png)
+![Screenshot 2023-06-10 235215](https://github.com/PKSharma96/Profile/assets/77106007/92139bd9-b311-4d9e-a257-97f8943156c1)
+![Screenshot 2023-06-10 235249](https://github.com/PKSharma96/Profile/assets/77106007/83211e17-152d-4e1e-90e8-4dddbc46dfcf)
 
-## Tech Stack used: 
+
+## Tools and Technologies used: 
 - HTML
 - CSS 
 - Bootstrap
 - Javascript 
 - Fetch API
-
-
-## Execution:
-- Download the entire repository.
-- Open up the index.html
