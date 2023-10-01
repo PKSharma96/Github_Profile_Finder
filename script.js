@@ -1,5 +1,6 @@
-const GIT_HUB_API_URL = "https://api.github.com/users/";
+// script.js
 
+const GIT_HUB_API_URL = "https://api.github.com/users/";
 const user_section = document.getElementById("user-section");
 
 const getUser = async (username) => {
@@ -19,7 +20,7 @@ const getUser = async (username) => {
             <div class="col-md-8">
             <div class="card-body">
                 <h5 class="card-title">${userinfo.name}</h5>
-                <p class="card-text"> ${userinfo.bio} </p>
+                <p class="card-text"> ${userinfo.bio || "No bio available"} </p>
 
                 <ul class="stats-info">
                     <li>${userinfo.public_repos} <strong>Repositories</strong></li>
@@ -38,8 +39,6 @@ const getUser = async (username) => {
   user_section.innerHTML = card;
   getRepositories(username);
 };
-
-getUser("github");
 
 const getRepositories = async (username) => {
   const repos = document.getElementById("repos");
@@ -65,4 +64,16 @@ const formSubmit = () => {
   }
 
   return false;
+};
+
+const searchUsers = async (query) => {
+  if (query.trim() === "") {
+    user_section.innerHTML = ""; // Clear the user section if the input is empty
+    return;
+  }
+
+  const res = await fetch(GIT_HUB_API_URL + `search/users?q=${query}`);
+  const data = await res.json();
+
+  const users = data.items; // Get the list of matching users
 };
